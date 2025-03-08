@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+		<!-- Replace the content tag with appropriate information -->
+		<meta name="description" content="DESCRIPTION META TAG">
+		<meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+		<meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+		<meta property="og:url" content="URL OF THE WEBSITE" />
+		<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+		<meta property="og:image" content="static/image/your_banner_image.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
+
+		<meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+		<meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+		<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+		<meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<!-- Keywords for your paper to be indexed by-->
+		<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<title>GBCN:3D-Guided Brownian Bridge Diffusion for
+			Clothed Human Reconstruction via Normal Integration</title>
+		<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+		<link rel="stylesheet" href="static/css/bulma.min.css">
+		<link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+		<link rel="stylesheet" href="static/css/bulma-slider.min.css">
+		<link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<link rel="stylesheet" href="static/css/index.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+		<script defer src="static/js/fontawesome.all.min.js"></script>
+		<script src="static/js/bulma-carousel.min.js"></script>
+		<script src="static/js/bulma-slider.min.js"></script>
+		<script src="static/js/index.js"></script>
+	</head>
+	<body>
+
+
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container is-max-desktop">
+					<div class="columns is-centered">
+						<div class="column has-text-centered">
+							<h1 class="title is-1 publication-title">GBCN:3D-Guided Brownian Bridge Diffusion for
+								Clothed Human Reconstruction via Normal Integration</h1>
+
+
+
+
+							<div class="column has-text-centered">
+								<div class="publication-links">
+									<!-- Arxiv PDF link -->
+									<span class="link-block">
+										<a href=".\static\pdfs\ICCV_submission_8220.pdf" target="_blank"
+											class="external-link button is-normal is-rounded is-dark">
+											<span class="icon">
+												<i class="fas fa-file-pdf"></i>
+											</span>
+											<span>Paper</span>
+										</a>
+									</span>
+
+									<!-- Supplementary PDF link -->
+									<span class="link-block">
+										<a href=".\static\pdfs\sup.pdf" target="_blank"
+											class="external-link button is-normal is-rounded is-dark">
+											<span class="icon">
+												<i class="fas fa-file-pdf"></i>
+											</span>
+											<span>Supplementary</span>
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Teaser video-->
+
+
+		<!-- End teaser video -->
+
+		<!-- Paper abstract -->
+		<section class="section hero is-light">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<h2 class="title is-3">Abstract</h2>
+						<div class="content has-text-justified">
+							<p>
+								Creating high-quality 3D models of clothed humans from a single image is crucial for
+								real-world applications. Existing models often make insufficient assumptions about the
+								geometric details of invisible areas, leading to less refined outputs. Despite recent
+								progress, 3D diffusion models still treat diffusion as a conditional generation process,
+								significantly impacted by domain gaps. We addressed this by proposing GBCN (3D-Guided
+								Brownian Bridge Diffusion for Clothed Human Reconstruction via Normal Integration) as a
+								novel solution. Specifically, we utilized the Brownian Bridge diffusion process to
+								directly map the image domain to the spatial domain through bidirectional diffusion,
+								avoiding conditional information leverage. Additionally, we progressively guided the
+								diffusion process with 3D pose priors to bridge the gap between 2D and 3D domains. To
+								better learn fine 3D geometric details in the latent space, we employed a consistency
+								loss function to enhance the model's robustness while maintaining sensitivity to fine
+								geometric details, ultimately regressing detailed front and back normal maps. Finally,
+								we used these detailed normal maps to reconstruct a fine 3D clothed model through
+								bidirectional normal integration and Poisson surface reconstruction. Our method
+								significantly improves geometric details, including invisible areas, and shows
+								robustness under various poses and loose clothing. Experiments demonstrate that due to
+								fine normal reconstruction, GBCN exhibits impressive performance in geometric
+								reconstruction pipelines, showing enhanced robustness in complex scenarios. We also
+								applied our method to virtual scene construction and 3D printing, showcasing its broad
+								potential for practical applications.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End paper abstract -->
+
+
+		<!-- Image carousel -->
+		<section class="hero is-small">
+			<div class="hero-body">
+				<div class="container">
+					<div class="item">
+						<!-- Your image here -->
+						<img src="static/images/fig1.png" alt="MY ALT TEXT" />
+						<h2 class="subtitle has-text-centered">
+							GBCN is a novel human body reconstruction network based on a diffusion model. Given an
+							image, GBCN utilizes the Brownian Bridge diffusion process to map the original image to
+							3D features in the latent space. It refines normal maps to reconstruct a detailed
+							clothed human mesh. By employing a consistency loss function and an SMPL-X prior
+							decoupling module, GBCN achieves an effective extension of the Brownian Bridge diffusion
+							process from 2D to 3D, bridging large domain gaps. Our method demonstrates excellent
+							performance on in-the-wild images and shows significant potential in real-world
+							applications such as 3D printing and scene construction.
+						</h2>
+					</div>
+					<div class="item">
+						<!-- Your image here -->
+						<img src="static/images/fig3.jpg" alt="MY ALT TEXT" />
+						<h2 class="subtitle has-text-centered">
+							Given an image, GBCN utilizes the Brownian bridge diffusion process (§3.1) to directly
+							predict the front and back normal maps of a clothed human body. During the back normal map
+							prediction, a cross-attention mechanism is employed to integrate SMPL back-view priors,
+							where a prior-mixing strategy incorporates these priors as query inputs, thereby enhancing
+							the model's capability to infer occluded regions from the image. To facilitate more accurate
+							learning of normal map color patterns, a series of hybrid consistency losses (§3.2) are
+							applied to guide the network's training process. The subsequent step involves 3D surface
+							reconstruction (§3.3): specifically, under the guidance of SMPL-X estimates, GBCN converts
+							the normal maps into incomplete 2.5D front and back surfaces and reconstructs the missing
+							geometric details. Finally, a pre-trained texture prediction network is used to produce a
+							high-quality textured mesh that can be directly employed in practical applications.
+						</h2>
+					</div>
+					<div class="item">
+						<!-- Your image here -->
+						<img src="static/images/fig6.png" alt="MY ALT TEXT" />
+						<h2 class="subtitle has-text-centered">
+							Qualitative results on in-the-wild images. We present nine examples of 3D humans with
+							detailed clothing reconstructed from wild images. These examples include loose clothing and
+							challenging poses. For each example, we show the input image, the predicted front and back
+							normal maps, and the reconstruction results. Our method shows impressive results.
+						</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End image carousel -->
+
+
+		<!-- Video carousel -->
+		<section class="hero is-small">
+			<div class="hero-body">
+				<div class="container">
+					<h2 class="title is-3">Another Carousel</h2>
+					<div id="results-carousel" class="carousel results-carousel">
+						<div class="item item-video1">
+							<video poster="" id="video1" autoplay controls muted loop height="100%">
+								<!-- Your video file here -->
+								<source src="static/videos/carousel1.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="item item-video2">
+							<video poster="" id="video2" autoplay controls muted loop height="100%">
+								<!-- Your video file here -->
+								<source src="static/videos/carousel2.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="item item-video3">
+							<video poster="" id="video3" autoplay controls muted loop height="100%">\
+								<!-- Your video file here -->
+								<source src="static/videos/carousel3.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End video carousel -->
+
+
+		<footer class="footer">
+			<div class="container">
+				<div class="columns is-centered">
+					<div class="column is-8">
+						<div class="content">
+
+							<p>
+								This page was built using the <a
+									href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+									target="_blank">Academic Project Page Template</a> which was adopted from the <a
+									href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+								You are free to borrow the source code of this website, we just ask that you link back
+								to this page in the footer. <br> This website is licensed under a <a rel="license"
+									href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+									Commons Attribution-ShareAlike 4.0 International License</a>.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Statcounter tracking code -->
+
+		<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+		<!-- End of Statcounter Code -->
+
+	</body>
+</html>
